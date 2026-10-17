@@ -1,6 +1,6 @@
 export const TOKEN = "AEG_TOKEN";
 
-export const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8080/api";
+export const API_URL ="aeg-ai-bot-backend-production-28dd.up.railway.app/api";
 
 export const PAGE_SIZE = 20;
 
