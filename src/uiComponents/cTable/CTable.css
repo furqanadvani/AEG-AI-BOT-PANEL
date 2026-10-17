@@ -1,0 +1,15 @@
+.c-table-wrapper {
+  border: 1px solid var(--them-divider);
+  border-radius: var(--them-radius-lg);
+  background: var(--them-white);
+  box-shadow: var(--them-shadow-sm);
+  overflow: hidden;
+}
+
+.c-table-wrapper .ant-table-pagination.ant-pagination {
+  padding: 0 16px;
+}
+
+.c-table-wrapper .ant-table-row.is-clickable {
+  cursor: pointer;
+}

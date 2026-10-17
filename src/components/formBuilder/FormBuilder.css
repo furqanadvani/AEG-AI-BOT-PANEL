@@ -1,0 +1,64 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 16px;
+}
+
+.form-grid.is-single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.form-grid .span-2 {
+  grid-column: 1 / -1;
+}
+
+.form-section-title {
+  grid-column: 1 / -1;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--them-text-gray);
+  margin: 4px 0 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--them-stroke);
+}
+
+.form-section-title:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+/* list field (exchange rates, room categories) */
+.form-list {
+  border: 1px dashed var(--them-stroke);
+  border-radius: var(--them-radius-md);
+  padding: 12px;
+  background: var(--them-surface);
+}
+
+.form-list-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) 32px;
+  gap: 10px;
+  align-items: start;
+}
+
+.form-list-row .c-field {
+  margin-bottom: 10px;
+}
+
+.form-list-remove {
+  margin-top: 26px;
+}
+
+.form-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding-top: 8px;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

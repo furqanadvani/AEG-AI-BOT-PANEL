@@ -1,0 +1,129 @@
+.tester {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Phone jaisa panel: brand blue header, dotted surface thread, neeche composer */
+.tester-phone {
+  border: 1px solid var(--them-stroke);
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* header (72) + page header (~150) + padding: composer hamesha screen par rahe */
+  height: max(480px, calc(100vh - 290px));
+  background: var(--them-white);
+}
+
+.tester-phone-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--them-primary);
+  color: var(--them-white);
+}
+
+.tester-phone-head img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--them-white);
+  padding: 4px;
+}
+
+.tester-phone-title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.tester-phone-sub {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.tester-phone-head .ant-btn {
+  margin-inline-start: auto;
+}
+
+.tester-thread {
+  flex: 1;
+  min-height: 0;
+}
+
+.tester-prompts {
+  display: flex;
+  gap: 8px;
+  padding: 10px 14px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  border-top: 1px solid var(--them-stroke);
+}
+
+.tester-prompts .ant-btn {
+  flex-shrink: 0;
+}
+
+.tester-composer {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  padding: 12px 14px 14px;
+}
+
+.tester-composer textarea.ant-input {
+  border-radius: 20px;
+  padding: 9px 16px;
+}
+
+/* Right: is turn mein bot ne kya kiya */
+.tester-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tester-panel {
+  padding: 18px;
+}
+
+.tester-step {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.tester-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.tester-stat {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--them-surface);
+}
+
+.tester-stat strong {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.tester-stat span {
+  font-size: 12px;
+  color: var(--them-text-gray);
+}
+
+@media (max-width: 1024px) {
+  .tester {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tester-phone {
+    height: max(460px, 72vh);
+  }
+}

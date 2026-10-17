@@ -1,0 +1,170 @@
+/* Bot ki baat-cheet: Chat tester aur Conversation detail dono yahi use karte hain */
+.chat-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 20px;
+  overflow-y: auto;
+  background: var(--them-subtle);
+}
+
+.chat-row {
+  display: flex;
+  flex-direction: column;
+  max-width: 78%;
+  gap: 4px;
+}
+
+.chat-row.is-user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat-row.is-assistant,
+.chat-row.is-error {
+  align-self: flex-start;
+}
+
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.is-user .chat-bubble {
+  background: var(--them-primary);
+  color: var(--them-white);
+  border-bottom-right-radius: 6px;
+}
+
+.is-assistant .chat-bubble {
+  background: var(--them-white);
+  border: 1px solid var(--them-stroke);
+  border-bottom-left-radius: 6px;
+  box-shadow: var(--them-shadow-sm);
+}
+
+.chat-row.is-agent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.is-agent .chat-bubble {
+  background: #ECFDF3;
+  border: 1px solid #ABEFC6;
+  border-bottom-right-radius: 6px;
+}
+
+.chat-author {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--them-text-gray);
+  padding-inline: 6px;
+}
+
+.chat-day {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--them-text-gray);
+  margin: 4px 0;
+}
+
+.chat-day::before,
+.chat-day::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--them-stroke);
+}
+
+.chat-system {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 90%;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #FEF3C7;
+  color: #92400E;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.chat-system time {
+  opacity: 0.7;
+}
+
+.is-error .chat-bubble {
+  background: #FEF3F2;
+  border: 1px solid #FECDCA;
+  color: var(--them-red);
+}
+
+.chat-bubble.is-silent {
+  font-style: italic;
+  color: var(--them-text-gray);
+}
+
+.chat-time {
+  font-size: 11px;
+  color: var(--them-text-gray);
+  padding-inline: 6px;
+}
+
+/* debug strip: bot ne yeh jawab kyun diya */
+.chat-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding-inline: 2px;
+}
+
+.chat-meta .ant-tag {
+  margin: 0;
+  font-size: 11px;
+  line-height: 18px;
+  padding-inline: 6px;
+}
+
+.chat-typing {
+  align-self: flex-start;
+  display: inline-flex;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--them-white);
+  border: 1px solid var(--them-stroke);
+  border-radius: 18px;
+  border-bottom-left-radius: 6px;
+}
+
+.chat-typing span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--them-text-gray);
+  animation: chatTyping 1.2s infinite ease-in-out;
+}
+
+.chat-typing span:nth-child(2) { animation-delay: 0.15s; }
+.chat-typing span:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes chatTyping {
+  0%, 80%, 100% { opacity: 0.25; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-typing span { animation: none; }
+}
+
+@media (max-width: 640px) {
+  .chat-row { max-width: 92%; }
+}

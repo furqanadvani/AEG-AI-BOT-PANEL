@@ -1,0 +1,27 @@
+.brand-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1;
+  gap: 5px;
+}
+
+.brand-logo-word {
+  font-weight: 800;
+  letter-spacing: 0.32em;
+  color: var(--them-primary);
+  font-size: 22px;
+  margin-inline-end: -0.32em;
+}
+
+.brand-logo-tag {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--them-text-gray);
+}
+
+.brand-logo.is-lg .brand-logo-word { font-size: 30px; }
+.brand-logo.is-lg .brand-logo-tag { font-size: 11px; }
+.brand-logo.is-lg { align-items: center; }

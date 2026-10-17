@@ -1,0 +1,13 @@
+/* Vite boilerplate (#root 1126px center wala) hata diya: woh admin layout ko tod deta tha */
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}

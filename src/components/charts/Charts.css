@@ -1,0 +1,140 @@
+/* ---- Sparkline ---- */
+.sparkline {
+  display: block;
+  width: 100%;
+  height: 34px;
+  overflow: visible;
+}
+
+/* ---- Bar chart (Activity) ---- */
+.bar-chart {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 8px;
+  height: 100%;
+  min-height: 220px;
+}
+
+.bar-chart-axis {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--them-text-gray);
+  padding-bottom: 22px;
+  text-align: end;
+}
+
+.bar-chart-plot {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(6px, 1.4vw, 14px);
+}
+
+.bar-chart-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar-chart-track {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  max-width: 18px;
+  border-radius: 999px;
+  background: #EEF2FF;
+  overflow: hidden;
+}
+
+.bar-chart-fill {
+  position: absolute;
+  inset-inline: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background: var(--them-primary);
+  transition: height 0.5s ease;
+}
+
+.bar-chart-col:hover .bar-chart-fill {
+  background: var(--them-primary-hover);
+}
+
+.bar-chart-label {
+  font-size: 10.5px;
+  font-weight: 500;
+  color: var(--them-text-gray);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ---- Progress list (pipeline / destinations) ---- */
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.progress-row {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr) 76px;
+  align-items: center;
+  gap: 12px;
+}
+
+.progress-row.no-badge {
+  grid-template-columns: minmax(0, 1fr) 76px;
+}
+
+.progress-row-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progress-row-name {
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.progress-row-track {
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-row-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.progress-row-value {
+  font-size: 13px;
+  font-weight: 600;
+  text-align: end;
+}
+
+.progress-row-value span {
+  font-weight: 400;
+  color: var(--them-text-gray);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar-chart-fill,
+  .progress-row-fill {
+    transition: none;
+  }
+}

@@ -1,0 +1,61 @@
+/**
+ * antd theme: saari base styling yahin se. Component CSS mein colors/radius dobara likhne ki zaroorat nahi.
+ * Values App.css ke --them-* tokens ke sath match hain.
+ */
+export const BRAND = {
+  primary: "#2563EB",
+  primaryHover: "#1D4ED8",
+  ink: "#111827",
+  muted: "#6B7280",
+  surface: "#F3F4F6",
+  stroke: "#E5E7EB",
+  white: "#FFFFFF",
+  success: "#16A34A",
+  warning: "#D97706",
+  danger: "#DC2626",
+};
+
+export const THEME = {
+  cssVar: true,
+  token: {
+    colorPrimary: BRAND.primary,
+    colorInfo: BRAND.primary,
+    colorLink: BRAND.primary,
+    colorSuccess: BRAND.success,
+    colorWarning: BRAND.warning,
+    colorError: BRAND.danger,
+    colorText: BRAND.ink,
+    colorTextSecondary: BRAND.muted,
+    colorTextDescription: BRAND.muted,
+    colorBorder: BRAND.stroke,
+    colorBorderSecondary: "#F0F1F3",
+    colorBgLayout: BRAND.surface,
+    colorFillAlter: "#F9FAFB",
+    fontFamily: '"Inter", system-ui, -apple-system, "Segoe UI", sans-serif',
+    fontSize: 14,
+    borderRadius: 8,
+    borderRadiusLG: 12,
+    borderRadiusSM: 6,
+    controlHeight: 38,
+    controlHeightLG: 44,
+    boxShadow: "0 4px 16px rgba(17, 24, 39, 0.08)",
+    boxShadowSecondary: "0 10px 30px rgba(17, 24, 39, 0.12)",
+  },
+  components: {
+    Button: { fontWeight: 600, primaryShadow: "none", defaultShadow: "none", dangerShadow: "none", defaultBorderColor: BRAND.stroke },
+    Input: { activeShadow: "0 0 0 3px rgba(37, 99, 235, 0.12)", paddingInline: 12 },
+    InputNumber: { activeShadow: "0 0 0 3px rgba(37, 99, 235, 0.12)" },
+    Select: { activeOutlineColor: "rgba(37, 99, 235, 0.12)", optionSelectedBg: "#EFF4FF" },
+    DatePicker: { activeShadow: "0 0 0 3px rgba(37, 99, 235, 0.12)" },
+    Card: { borderRadiusLG: 12, headerFontSize: 15 },
+    Table: { headerBg: "#F9FAFB", headerColor: BRAND.muted, headerSplitColor: "transparent", rowHoverBg: "#F9FAFB", borderColor: "#F0F1F3", cellPaddingBlock: 14 },
+    Modal: { borderRadiusLG: 14, titleFontSize: 18 },
+    Drawer: { footerPaddingBlock: 16 },
+    Tabs: { titleFontSize: 14, horizontalItemGutter: 24 },
+    Tag: { borderRadiusSM: 6 },
+    Menu: { itemBorderRadius: 8, itemSelectedBg: "#EFF4FF", itemSelectedColor: BRAND.primary },
+    Segmented: { itemSelectedBg: BRAND.white, trackBg: "#EEF0F3" },
+    Progress: { remainingColor: "#EEF0F3" },
+    Descriptions: { labelBg: "#F9FAFB", titleColor: BRAND.ink },
+  },
+};

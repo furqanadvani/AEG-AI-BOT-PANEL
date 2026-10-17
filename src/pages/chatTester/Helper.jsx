@@ -1,0 +1,38 @@
+/** Bot ka `next` step seedhi zaban mein (debug panel) */
+export const STEP_TEXT = {
+  welcome: ["Welcome", "First message: the bot introduced itself."],
+  ask_field: ["Asking for a detail", "Asked the next required question."],
+  confirm_phone: ["Confirming WhatsApp number", "Repeated the number back for confirmation."],
+  confirm_summary: ["Showing summary", "Showed all details and asked to confirm."],
+  lead_created: ["Lead created", "Application saved, linked to the customer profile, agent emailed."],
+  duplicate: ["Duplicate application", "An open application already exists for this number and visa."],
+  status_ask: ["Status: details needed", "Asked for the reference or WhatsApp number."],
+  status_result: ["Status shared", "Found the lead and shared its status."],
+  status_not_found: ["Status: not found", "No application matched these details."],
+  blocked_country: ["Country not served", "This country is turned off in Countries."],
+  refused_visa_type: ["Visa type refused", "This visa type is set to Refuse."],
+  refused_final: ["Visa type refused", "This visa type is set to Refuse."],
+  query_logged: ["Sent to team", "The question was sent to Queries."],
+  query_failed: ["Could not save query", "Check the backend logs."],
+  cancelled: ["Cancelled", "The customer stopped the application (logged as LOST)."],
+  throttled: ["Too many messages", "More messages than MaxMsgsPerMinute allows."],
+  after_submit: ["After submit", "Conversation after the lead was created."],
+  feedback_thanks: ["Feedback received", "The customer left a rating."],
+  human_already: ["Already with team", "A request for a person was already sent."],
+  goodbye: ["Goodbye", "The customer ended the conversation."],
+  answer_only: ["Answered a question", "Answered from Knowledge."],
+  offer_apply: ["Offered to apply", "Answered and offered to start an application."],
+  help: ["Help", "Explained what the bot can do."],
+  country_list: ["Country list", "Listed the countries served."],
+  lead_failed: ["Lead not saved", "Something went wrong. Check the backend logs."],
+};
+
+export const QUICK_PROMPTS = [
+  "Assalam o alaikum",
+  "I need a Dubai tourist visa",
+  "We are 2 people",
+  "How long does the visa take?",
+  "Check my application status",
+  "I want to talk to a person",
+  "I want a USA visa",
+];

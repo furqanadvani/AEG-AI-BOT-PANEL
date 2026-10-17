@@ -1,0 +1,9 @@
+.container-wrapper-body {
+  padding: 24px 32px 40px;
+}
+
+@media (max-width: 900px) {
+  .container-wrapper-body {
+    padding: 16px;
+  }
+}

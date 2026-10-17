@@ -1,0 +1,30 @@
+.setting-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 1.4fr) auto;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #F0F1F3;
+}
+
+.setting-row:last-child {
+  border-bottom: 0;
+}
+
+.setting-row.is-changed {
+  background: #FFFBEB;
+  box-shadow: inset 3px 0 0 var(--them-amber);
+}
+
+.setting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .setting-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

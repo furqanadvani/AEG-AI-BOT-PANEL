@@ -1,0 +1,37 @@
+.conv-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.conv-preview {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #4B5563;
+  line-height: 1.45;
+}
+
+.conv-preview-who {
+  font-weight: 600;
+  color: var(--them-text-gray);
+}
+
+.conv-eye {
+  color: var(--them-primary) !important;
+  border-color: #C7D7FE !important;
+  background: var(--them-primary-soft) !important;
+}
+
+.conv-eye:hover {
+  background: var(--them-primary) !important;
+  color: var(--them-white) !important;
+}
+
+.conv-row-active > td {
+  background: var(--them-primary-soft) !important;
+}
