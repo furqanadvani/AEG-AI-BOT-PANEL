@@ -1,6 +1,6 @@
 export const TOKEN = "AEG_TOKEN";
 
-export const API_URL ="aeg-ai-bot-backend-production-28dd.up.railway.app/api";
+export const API_URL ="https://aeg-ai-bot-backend-production-28dd.up.railway.app/api";
 
 export const PAGE_SIZE = 20;
 
